@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'rest_framework_drilldown',
 
     # Our apps
-    'core'
+    'core',
+    'api',
+    'email_marketing'
 ]
 
 MIDDLEWARE = [
