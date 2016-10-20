@@ -19,6 +19,7 @@ class SubscribersTestCase(APITestCase):
         response = self.client.post(self.url,
                                     format='json')
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(response.json()['email'][0], "This field is required.")
 
         # Invalid email
         response = self.client.post(self.url,
@@ -27,6 +28,7 @@ class SubscribersTestCase(APITestCase):
                                     },
                                     format='json')
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(response.json()['email'][0], "Enter a valid email address.")
 
         # Valid email
         response = self.client.post(self.url,
@@ -46,6 +48,7 @@ class SubscribersTestCase(APITestCase):
                                     },
                                     format='json')
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(response.json()['email'][0], "subscriber with this Email already exists.")
 
     def test_method_not_allowed(self):
         response = self.client.get(self.url,
