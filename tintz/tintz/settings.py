@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     # Our apps
     'core',
     'api',
-    'email_marketing'
+    'newsletter'
 ]
 
 MIDDLEWARE = [

@@ -19,5 +19,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/(?P<version>v1)/email/', include('email_marketing.urls')),
+    url(r'^api/(?P<version>v1)/newsletter/', include('newsletter.urls')),
 ]

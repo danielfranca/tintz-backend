@@ -1,6 +1,6 @@
 from rest_framework.test import APITestCase
 from rest_framework import status
-from email_marketing.models import Subscriber
+from newsletter.models import Subscriber
 
 
 # Create your tests here.

@@ -1,7 +1,7 @@
 from api.views import BaseApiView, SerializerFactory
-from email_marketing.models import Subscriber
+from newsletter.models import Subscriber
 
-# Create your views here.
+
 class SubscriberApi(BaseApiView):
     """
     Endpoint to add subscriber
